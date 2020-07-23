@@ -56,9 +56,9 @@ class GetFiles:
                 try:
                     for filename in filenames:
                         self.fname.set(filename)
-                        print(f'Looking for files: {filename}',
-                              end='\r', flush=True)
                         if re.search(regex, filename):
+                            print(f'Looking for files: {filename}',
+                              end='\r', flush=True)
                             self.files.append(os.path.join(dirpath, filename))
                 except (re.error):
                     print('\n\nInvalid regular expression.\
